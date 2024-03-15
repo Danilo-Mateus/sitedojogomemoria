@@ -1,149 +1,238 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 main {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    background-size: cover;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 20px 50px;
-    background-color: rgba(29, 4, 29, 0.836);
-  }
-  nav.menu-lateral{
-    width: 60px;
-    height: 100%;
-    background-color: #202020;
-    position: fixed; /* Mantém o nav fixo na tela */
-    top: 0; /* Alinha o topo do nav com o topo da tela */
-    left: 0; 
-    padding: 40px 0 40px 1%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    box-shadow: 3px 0 0 #ff0077;
-    position: fixed;
-    overflow: hidden;
-    z-index: 999;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-size: cover;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 20px 50px;
+  background-color: rgba(29, 4, 29, 0.836);
+}
+nav.menu-lateral {
+  width: 60px;
+  height: 100%;
+  background-color: #202020;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 40px 0 40px 1%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-shadow: 3px 0 0 #ff0077;
+  overflow: hidden;
+  z-index: 999;
 }
 nav.menu-lateral:hover{
-    width: 300px;
-  transition: .2s;
+  width: 300px;
+transition: .2s;
 }
 .btn-expandir{
-    width: 100%;
-    padding-left: 10px;
+  width: 100%;
+  padding-left: 10px;
 }
 .btn-expandir > i {
-    color: white;
-    font-size: 24px;
-    margin-top: 20px;
-    cursor: pointer;
+  color: white;
+  font-size: 24px;
+  margin-top: 20px;
+  cursor: pointer;
 }
 ul{
-    height: 100%;
-    list-style-type: none;
-    padding: 0;
-   
+  height: 100%;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+ 
 }
 ul li.item-menu:hover{
-    background-color: #ff0077;
-  
+  background-color: #ff0077;
+
 }
-ul li.item-menu a{
-    color: white;
-    font-size: 15px;
-    text-decoration: none;
-    padding: 20px 4%;
-    display: flex;
-    margin-bottom: 20px;
-    line-height: 40px;
-   margin-left: 0;
-}
-ul li.item-menu a .txt-link{
-margin-left: 30px;
+ul li.item-menu a {
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+  padding: 20px 10px; /* Ajustando o preenchimento para os itens da navegação */
+  display: flex;
+  align-items: center; /* Alinhando verticalmente os itens da navegação */
 }
 
-ul li.item-menu a .icon{
-    font-size: 30px;
-   
-    }
-  #titulo p{
-    text-align: center;
-    color: white;
-  }
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-color: rgba(255, 255, 255, 0.8);
-    font-size: 1.2em;
-    width: 100%;
-    max-width: 800px;
-    padding: 30px;
-    margin: 0 0 30px;
-    border-radius: 5px;
-    font-style: italic;
-  }
-  header .titulo{
-    color: #202020;
-    font-weight: bolder;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  }
+ul li.item-menu a .txt-link {
+  margin-left: 10px; /* Ajustando a margem do texto do link */
+}
+
+ul li.item-menu a .icon {
+  font-size: 30px; /* Reduzindo o tamanho do ícone para caber no espaço */
+  margin-right: 30px; /* Ajustando a margem do ícone */
+}
+#dificuldade {
+  margin-top: 20px; /* Adicionando margem superior para separar do título */
+  text-align: center; /* Centralizando o conteúdo */
+}
+
+#dificuldade label {
+  display: block;
+  margin-bottom: 10px; /* Adicionando espaço entre o rótulo e o seletor de dificuldade */
+  color: white; /* Definindo a cor do texto para branco */
+  font-size: 18px; /* Ajustando o tamanho da fonte */
+}
+
+#dificuldade select, #dificuldade button {
+  padding: 10px 20px; /* Adicionando preenchimento para tornar os elementos mais clicáveis */
+  font-size: 16px; /* Ajustando o tamanho da fonte */
+  border: none; /* Removendo a borda padrão */
+  border-radius: 5px; /* Adicionando borda arredondada */
+  background-color: #ff0077; /* Definindo a cor de fundo */
+  color: white; /* Definindo a cor do texto para branco */
+  cursor: pointer; /* Mudando o cursor para indicar interatividade */
+  transition: background-color 0.3s; /* Adicionando transição suave */
+}
+
+#dificuldade select:hover, #dificuldade button:hover {
+  background-color: #d60052; /* Mudando a cor de fundo ao passar o mouse */
+}
+
+#dificuldade button {
+  margin-left: 10px; /* Adicionando margem à esquerda para separar o seletor de dificuldade e o botão */
+}
+#titulo p{
+  text-align: center;
+  color: white;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.2em;
+  width: 100%;
+  max-width: 800px;
+  padding: 30px;
+  margin: 0 0 30px;
+  border-radius: 5px;
+  font-style: italic;
+}
+header .titulo{
+  color: #202020;
+  font-weight: bolder;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 15px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  aspect-ratio: 3/4;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+  transition: all 400ms ease;
+  transform-style: preserve-3d;
+  background-color: #ccc;
+}
+
+.face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  border: 5px solid #00b5cc;
+  border-radius: 5px;
+  transition: all 400ms ease;
+}
+
+.front {
+  transform: rotateY(180deg);
+
+}
+
+.back {
+  background-image: url(images/back.png);
+  backface-visibility: hidden;
+  background-size:cover;
+  background-repeat: no-repeat;
+  display:flex;
+  justify-content: right;
+}
+
+.reveal-card {
+  transform: rotateY(180deg);
+}
+
+.disabled-card {
+  filter: saturate(0);
+  opacity: 0.5;
+}
+
+.grid {
+  display: grid;
+  gap: 15px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* Estilos para o modal de vitória */
+/* Estilo da modal */
+.modal {
+  display: none; /* Inicialmente escondida */
+  position: fixed; /* Posição fixa */
+  z-index: 1; /* Posicionamento acima de outros elementos */
+  left: 320px;
+  top: 100px;
+  width: 800px; /* Largura total */
+  height: 800px; /* Altura total */
+  overflow: auto; /* Adiciona rolagem se necessário */
+  align-items: center;
+}
+
+/* Conteúdo da modal */
+.modal-content {
+  background-color: #fefefe; /* Cor de fundo da modal */
+  margin: 15% auto; /* Margem vertical e centralização horizontal */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Largura da modal */
+}
+
+/* Botão de fechar */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 599px) {
   .grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 15px;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    grid-template-columns: repeat(getNumberOfCardsPerRow(), 1fr); /* For easy difficulty */
   }
-  
-  .card {
-    aspect-ratio: 3/4;
-    width: 100%;
-    border-radius: 5px;
-    position: relative;
-    transition: all 400ms ease;
-    transform-style: preserve-3d;
-    background-color: #ccc;
+}
+
+@media screen and (min-width: 600px) and (max-width: 919px) {
+  .grid {
+    grid-template-columns: repeat(getNumberOfCardsPerRow(), 1fr); /* For medium difficulty */
   }
-  
-  .face {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-size: cover;
-    background-position: center;
-    border: 5px solid #00b5cc;
-    border-radius: 5px;
-    transition: all 400ms ease;
+}
+
+@media screen and (min-width: 920px) {
+  .grid {
+    grid-template-columns: repeat(getNumberOfCardsPerRow(), 1fr); /* For hard difficulty */
   }
-  
-  .front {
-    transform: rotateY(180deg);
- 
-  }
-  
-  .back {
-    background-image: url(images/back.png);
-    backface-visibility: hidden;
-    background-size:cover;
-    background-repeat: no-repeat;
-    display:flex;
-    justify-content: right;
-  }
-  
-  .reveal-card {
-    transform: rotateY(180deg);
-  }
-  
-  .disabled-card {
-    filter: saturate(0);
-    opacity: 0.5;
-  }
-  
-  @media screen and (max-width:920px) {
-    .grid {
-      grid-template-columns: repeat(5, 1fr);
-  
-    }
-  }
-  
+}

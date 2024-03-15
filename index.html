@@ -5,51 +5,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="game.css">
-
   <title>Memory Game</title>
 </head>
 
 <body>
   <nav class="menu-lateral">
     <div class="btn-expandir">
-        <i class="bi bi-list"></i>
+      <i class="bi bi-list"></i>
     </div>
     <ul>
-    <li class="item-menu">
+      <li class="item-menu">
         <a href="">
-            <span class="icon"><i class="bi bi-house"></i></span>
-            <span class="txt-link">Home</span>
+          <span class="icon"><i class="bi bi-house"></i></span>
+          <span class="txt-link">Home</span>
         </a>
-        <li class="item-menu">
-            <a href="">
-                <span class="icon"><i class="bi bi-grid-3x3"></i></span>
-                <span class="txt-link"> velha</span>
-            </a>
-            <li class="item-menu">
-                <a href="">
-                    <span class="icon"><i class="bi bi-apple"></i></span>
-                    <span class="txt-link"> apple</span>
-                </a>
-                <li class="item-menu">
-                    <a href="">
-                        <span class="icon"><i class="bi bi-music-note"></i></span>
-                        <span class="txt-link"> musica</span>
-                    </a>
-                    <li class="item-menu">
-                        <a href="">
-                            <span class="icon"><i class="bi bi-file-person"></i></span>
-                            <span class="txt-link">Apresentação</span>
-                        </a>
-</ul>
-</nav>
+      </li>
+      <li class="item-menu">
+        <a href="">
+          <span class="icon"><i class="bi bi-grid-3x3"></i></span>
+          <span class="txt-link">Jogo da Velha</span>
+        </a>
+      </li>
+      <li class="item-menu">
+        <a href="">
+          <span class="icon"><i class="bi bi-apple"></i></span>
+          <span class="txt-link">Jogo da Memoria</span>
+        </a>
+      </li>
+      <li class="item-menu">
+        <a href="">
+          <span class="icon"><i class="bi bi-music-note"></i></span>
+          <span class="txt-link">Jogo de Música</span>
+        </a>
+      </li>
+      <li class="item-menu">
+        <a href="">
+          <span class="icon"><i class="bi bi-file-person"></i></span>
+          <span class="txt-link">Apresentação</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
   <main>
     <header>
-      <span class="titulo" >JOGO DA MEMORIA</span>
+      <span class="titulo">JOGO DA MEMÓRIA</span>
       <span>Tempo: <span class="timer">00</span></span>
     </header>
 
+    <!-- Adicione o menu de seleção de dificuldade -->
+    <div id="dificuldade">
+      <label for="nivel">Escolha a dificuldade:</label>
+      <select id="nivel">
+        <option value="facil">Fácil</option>
+        <option value="medio">Médio</option>
+        <option value="dificil">Difícil</option>
+      </select>
+      <button id="iniciarJogo">Iniciar Jogo</button>
+    </div>
+  
     <div class="grid"></div>
   </main>
+ <!-- Dentro do corpo do seu HTML -->
+<div id="vitoria-modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Parabéns! Você venceu!</p>
+    <p>Tempo: <span class="time-victory">00:00</span></p>
+  </div>
+</div>
   <script defer src="script.js"></script>
 </body>
 </html>
